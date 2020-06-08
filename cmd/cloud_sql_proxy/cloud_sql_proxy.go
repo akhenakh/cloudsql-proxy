@@ -21,7 +21,6 @@ package main
 
 import (
 	"errors"
-	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -42,6 +41,7 @@ import (
 	"github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/util"
 
 	"cloud.google.com/go/compute/metadata"
+	"github.com/namsral/flag"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
 	goauth "golang.org/x/oauth2/google"

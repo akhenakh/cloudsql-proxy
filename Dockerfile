@@ -27,3 +27,4 @@ RUN go build -ldflags "-X 'main.versionString=$VERSION'" -o cloud_sql_proxy ./cm
 FROM gcr.io/distroless/base-debian10:nonroot
 COPY --from=build --chown=nonroot /go/src/cloudsql-proxy/cloud_sql_proxy /cloud_sql_proxy
 USER nonroot
+ENTRYPOINT ["/cloud_sql_proxy"]
